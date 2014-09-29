@@ -1,0 +1,11 @@
+<h1>Create your new URL</h1>
+
+<%= form_for @link do |f| %>
+	<fieldset>
+		<div class='fields'>
+			<%= f.label :link, 'URL'%>
+			<%= f.text_field :link %>
+		</div>	
+	</fieldset>
+	<%= f.submit "Create my URL" %>
+<% end %>
