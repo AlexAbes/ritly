@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-
+before_action 
 	def index
 		
 	end
@@ -21,7 +21,7 @@ class LinksController < ApplicationController
 	def show
 		@link = Link.find(params[:id])
 		@full_path = "#{request.protocol}#{request.host_with_port}/#{@link.hash_code}"
-		
+
 		
 	end
 

@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "links#index"
+  root "home#index"
 
   resources :links
 
-  get '/:hash_code', to: 'links#redirectors'
+  get '/:hash_code', to: 'links#redirector'
   get '/:hash_code', to: 'links#preview'
 
   # get '/:code', to: 'urls#redirectors'
